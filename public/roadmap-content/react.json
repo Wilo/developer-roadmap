@@ -1671,8 +1671,24 @@
   },
   "y2dI1DVLWKAkv6VRpgaQa": {
     "title": "GSock",
-    "description": "",
-    "links": []
+    "description": "`GSAP` (GreenSock Animation Platform) is a framework-agnostic JavaScript animation library that turns developers into animation superheroes. Build high-performance animations that work in every major browser. Animate CSS, SVG, canvas, React, Vue, WebGL, colors, strings, motion paths, generic objects...anything JavaScript can touch!\n\nVisit the following resources to learn more:",
+    "links": [
+      {
+        "title": "GSAP: Homepage",
+        "url": "https://gsap.com/docs/v3/",
+        "type": "article"
+      },
+      {
+        "title": "The Beginner's Guide to the GreenSock Animation Platform",
+        "url": "https://www.freecodecamp.org/news/the-beginners-guide-to-the-greensock-animation-platform-7dc9fd9eb826/",
+        "type": "article"
+      },
+      {
+        "title": "Intro to Greensock Web Animation",
+        "url": "https://www.youtube.com/watch?v=EOa7ccPWvXg",
+        "type": "video"
+      }
+    ]
   },
   "_F3WMxhzaK9F8_-zHDDMF": {
     "title": "Suspense",
