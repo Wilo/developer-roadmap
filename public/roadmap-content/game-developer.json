@@ -430,8 +430,14 @@
   },
   "WVgozaQPFbYthZLWMbNUg": {
     "title": "Rendering Equation",
-    "description": "The **Render Equation**, also known as the **Rendering Equation**, is a fundamental principle in computer graphics that serves as the basis for most advanced lighting algorithms today. First introduced by James Kajiya in 1986, it defines how light interacts with physical objects in a given environment. The equation tries to simulate light's behavior, taking into account aspects such as transmission, absorption, scattering, and emission. The equation can be computationally intensive to solve accurately. It's worth mentioning, however, that many methods have been developed to approximate and solve it, allowing the production of highly realistic images in computer graphics.",
-    "links": []
+    "description": "The **Render Equation**, also known as the **Rendering Equation**, is a fundamental principle in computer graphics that serves as the basis for most advanced lighting algorithms today. First introduced by James Kajiya in 1986, it defines how light interacts with physical objects in a given environment. The equation tries to simulate light's behavior, taking into account aspects such as transmission, absorption, scattering, and emission. The equation can be computationally intensive to solve accurately. It's worth mentioning, however, that many methods have been developed to approximate and solve it, allowing the production of highly realistic images in computer graphics.\n\nVisit the following resources to learn more:",
+    "links": [
+      {
+        "title": "Interactive Graphics 12 - The Rendering Equation",
+        "url": "https://www.youtube.com/watch?v=wawf7Am6xy0",
+        "type": "video"
+      }
+    ]
   },
   "eI2jym4AAz3ani-lreSKE": {
     "title": "Reflection",
@@ -688,8 +694,14 @@
   },
   "ztoW8fBY73Es624A_tjd7": {
     "title": "Behavior Tree",
-    "description": "The **Behavior Tree** is a decision-making system used in game development, primarily for AI character behavior. These trees help define the actions an AI character will take, based on predefined tasks and conditions. The tree structure starts from a single root, branching out to nodes that represent these decisions or tasks. The tasks can be simple, such as moving from one point to another, or can be complex decisions like whether to attack or retreat. This kind of structure is advantageous because it is easy to add, remove, or modify tasks without breaking the tree or affecting other tasks. This makes it highly flexible and easy to manage, irrespective of the complexity of the tasks.",
-    "links": []
+    "description": "The **Behavior Tree** is a decision-making system used in game development, primarily for AI character behavior. These trees help define the actions an AI character will take, based on predefined tasks and conditions. The tree structure starts from a single root, branching out to nodes that represent these decisions or tasks. The tasks can be simple, such as moving from one point to another, or can be complex decisions like whether to attack or retreat. This kind of structure is advantageous because it is easy to add, remove, or modify tasks without breaking the tree or affecting other tasks. This makes it highly flexible and easy to manage, irrespective of the complexity of the tasks.\n\nVisit the following resources to learn more:",
+    "links": [
+      {
+        "title": "Unreal Engine 5 Tutorial - AI Part 2: Behavior Tree",
+        "url": "https://www.youtube.com/watch?v=hbHqv9ov8IM&list=PL4G2bSPE_8uklDwraUCMKHRk2ZiW29R6e&index=3&t=16s",
+        "type": "video"
+      }
+    ]
   },
   "4ZCVUpYrCT14d_JULulLe": {
     "title": "Fuzzy Logic",
