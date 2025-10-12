@@ -1,8 +1,7 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { cn } from '../../lib/classname.ts';
 import { Filter, X } from 'lucide-react';
 import { CategoryFilterButton } from './CategoryFilterButton.tsx';
-import { useOutsideClick } from '../../hooks/use-outside-click.ts';
 import {
   deleteUrlParam,
   getUrlParams,
@@ -10,8 +9,27 @@ import {
 } from '../../lib/browser.ts';
 import { RoadmapCard } from './RoadmapCard.tsx';
 import { httpGet } from '../../lib/http.ts';
-import type { UserProgressResponse } from '../HeroSection/FavoriteRoadmaps.tsx';
 import { isLoggedIn } from '../../lib/jwt.ts';
+import type { AllowedMemberRoles } from '../ShareOptions/ShareTeamMemberList.tsx';
+
+export type UserProgressResponse = {
+  resourceId: string;
+  resourceType: 'roadmap' | 'best-practice';
+  resourceTitle: string;
+  isFavorite: boolean;
+  done: number;
+  learning: number;
+  skipped: number;
+  total: number;
+  updatedAt: Date;
+  isCustomResource: boolean;
+  roadmapSlug?: string;
+  team?: {
+    name: string;
+    id: string;
+    role: AllowedMemberRoles;
+  };
+}[];
 
 const groupNames = [
   'Absolute Beginners',
@@ -22,6 +40,7 @@ const groupNames = [
   'Databases',
   'Computer Science',
   'Machine Learning',
+  'Management',
   'Game Development',
   'Design',
   'DevOps',
@@ -133,6 +152,12 @@ const groups: GroupType[] = [
         otherGroups: ['Web Development'],
       },
       {
+        title: 'Next.js',
+        link: '/nextjs',
+        type: 'skill',
+        otherGroups: ['Web Development'],
+      },
+      {
         title: 'Spring Boot',
         link: '/spring-boot',
         type: 'skill',
@@ -150,8 +175,26 @@ const groups: GroupType[] = [
     group: 'Languages / Platforms',
     roadmaps: [
       {
+        title: 'HTML',
+        link: '/html',
+        type: 'skill',
+        otherGroups: ['Web Development', 'Absolute Beginners'],
+      },
+      {
+        title: 'CSS',
+        link: '/css',
+        type: 'skill',
+        otherGroups: ['Web Development', 'Absolute Beginners'],
+      },
+      {
         title: 'JavaScript',
         link: '/javascript',
+        type: 'skill',
+        otherGroups: ['Web Development', 'DevOps', 'Mobile Development', 'Absolute Beginners'],
+      },
+      {
+        title: 'Kotlin',
+        link: '/kotlin',
         type: 'skill',
         otherGroups: ['Web Development', 'DevOps', 'Mobile Development'],
       },
@@ -165,7 +208,13 @@ const groups: GroupType[] = [
         title: 'Node.js',
         link: '/nodejs',
         type: 'skill',
-        otherGroups: ['Web Development', 'DevOps'],
+        otherGroups: ['Web Development', 'DevOps', 'Absolute Beginners'],
+      },
+      {
+        title: 'PHP',
+        link: '/php',
+        type: 'skill',
+        otherGroups: ['Web Development', 'DevOps', 'Absolute Beginners'],
       },
       {
         title: 'C++',
@@ -176,7 +225,7 @@ const groups: GroupType[] = [
         title: 'Go',
         link: '/golang',
         type: 'skill',
-        otherGroups: ['Web Development', 'DevOps'],
+        otherGroups: ['Web Development', 'DevOps', 'Absolute Beginners'],
       },
       {
         title: 'Rust',
@@ -228,6 +277,12 @@ const groups: GroupType[] = [
       {
         title: 'AWS',
         link: '/aws',
+        type: 'skill',
+        otherGroups: ['Web Development'],
+      },
+      {
+        title: 'Cloudflare',
+        link: '/cloudflare',
         type: 'skill',
         otherGroups: ['Web Development'],
       },
@@ -338,11 +393,6 @@ const groups: GroupType[] = [
         type: 'role',
       },
       {
-        title: 'Product Manager',
-        link: '/product-manager',
-        type: 'role',
-      },
-      {
         title: 'DevRel Engineer',
         link: '/devrel',
         type: 'role',
@@ -352,6 +402,11 @@ const groups: GroupType[] = [
   {
     group: 'Machine Learning',
     roadmaps: [
+      {
+        title: 'Machine Learning',
+        link: '/machine-learning',
+        type: 'role',
+      },
       {
         title: 'AI and Data Scientist',
         link: '/ai-data-scientist',
@@ -363,8 +418,28 @@ const groups: GroupType[] = [
         type: 'role',
       },
       {
+        title: 'AI Agents',
+        link: '/ai-agents',
+        type: 'role',
+      },
+      {
+        title: 'AI Red Teaming',
+        link: '/ai-red-teaming',
+        type: 'skill',
+      },
+      {
         title: 'Data Analyst',
         link: '/data-analyst',
+        type: 'role',
+      },
+      {
+        title: 'BI Analyst',
+        link: '/bi-analyst',
+        type: 'role',
+      },
+      {
+        title: 'Data Engineer',
+        link: '/data-engineer',
         type: 'role',
       },
       {
@@ -376,6 +451,21 @@ const groups: GroupType[] = [
         title: 'Prompt Engineering',
         link: '/prompt-engineering',
         type: 'skill',
+      },
+    ],
+  },
+  {
+    group: 'Management',
+    roadmaps: [
+      {
+        title: 'Product Manager',
+        link: '/product-manager',
+        type: 'role',
+      },
+      {
+        title: 'Engineering Manager',
+        link: '/engineering-manager',
+        type: 'role',
       },
     ],
   },
@@ -546,10 +636,10 @@ export function RoadmapsPage() {
         {isFilterOpen && <X size={13} className="mr-1" />}
         Categories
       </button>
-      <div className="container relative flex flex-col gap-4 sm:flex-row">
+      <div className="relative container flex flex-col gap-4 sm:flex-row">
         <div
           className={cn(
-            'hidden w-full flex-col from-gray-100 sm:w-[180px] sm:border-r sm:bg-gradient-to-l sm:pt-6',
+            'hidden w-full flex-col from-gray-100 sm:w-[180px] sm:border-r sm:bg-linear-to-l sm:pt-6',
             {
               'hidden sm:flex': !isFilterOpen,
               'z-50 flex': isFilterOpen,
@@ -584,10 +674,10 @@ export function RoadmapsPage() {
             </div>
           </div>
         </div>
-        <div className="flex flex-grow flex-col gap-6 pb-20 pt-2 sm:pt-8">
+        <div className="flex grow flex-col gap-6 pt-2 pb-20 sm:pt-8">
           {visibleGroups.map((group) => (
             <div key={`${group.group}-${group.roadmaps.length}`}>
-              <h2 className="mb-2 text-xs uppercase tracking-wide text-gray-400">
+              <h2 className="mb-2 text-xs tracking-wide text-gray-400 uppercase">
                 {group.group}
               </h2>
 

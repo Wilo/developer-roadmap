@@ -1,9 +1,8 @@
 # JavaScript
 
-JavaScript allows you to add interactivity to your pages. Common examples that you may have seen on the websites are sliders, click interactions, popups and so on.
+JavaScript adds interactivity to webpages through sliders, click events, pop-ups, and dynamic behavior. Transforms static HTML structure and CSS styling into interactive, responsive user experiences. Essential for modern web functionality and user engagement.
 
 Visit the following resources to learn more:
 
-- [@article@W3Schools – JavaScript Tutorial](https://www.w3schools.com/js/)
 - [@article@The Modern JavaScript Tutorial](https://javascript.info/)
 - [@video@JavaScript Tutorial Full Course - Beginner to Pro (2024)](https://www.youtube.com/watch?v=EerdGm-ehJQ)

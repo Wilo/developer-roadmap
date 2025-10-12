@@ -1,6 +1,6 @@
 # HTTPS
 
-Hypertext transfer protocol secure (HTTPS) is the secure version of HTTP, which is the primary protocol used to send data between a web browser and a website. HTTPS is encrypted in order to increase security of data transfer. This is particularly important when users transmit sensitive data, such as by logging into a bank account, email service, or health insurance provider.
+HTTPS (Hypertext Transfer Protocol Secure) is HTTP's encrypted version, securing data transmission between browsers and websites. Essential for protecting sensitive information like banking and email. Ensures privacy and security through data encryption for online communications.
 
 Visit the following resources to learn more:
 

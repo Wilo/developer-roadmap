@@ -1,6 +1,6 @@
 # Svelte
 
-Svelte is a modern JavaScript framework for building user interfaces that takes a unique approach to web development. Unlike traditional frameworks that do most of their work in the browser, Svelte shifts that work into a compile step that happens when you build your app. It compiles your code to efficient vanilla JavaScript, resulting in smaller bundle sizes and better runtime performance. Svelte uses a component-based architecture and features a simple, intuitive syntax that allows developers to write less code. It includes built-in state management, CSS scoping, and animations. Svelte's approach eliminates the need for a virtual DOM, leading to faster initial loads and updates. Its simplicity and performance benefits have been gaining it increasing popularity in the front-end development community.
+Svelte is a compile-time JavaScript framework building UIs with minimal runtime overhead. Compiles components to optimized vanilla JavaScript without virtual DOM. Features simple syntax, built-in state management, styling, and animations. Known for small bundle sizes and fast performance.
 
 Visit the following resources to learn more:
 

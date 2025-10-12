@@ -1,6 +1,6 @@
 # Yarn
 
-Yarn is a fast, reliable, and secure package manager for JavaScript, developed by Facebook as an alternative to npm (Node Package Manager). It addresses issues of consistency, security, and performance in dependency management. Yarn uses a lockfile to ensure consistent installations across different environments and offers parallel installation of packages, significantly speeding up the process. It features offline mode, allowing installation from cached packages, and provides improved network performance through request queuing and retries. Yarn's focus on security includes checksum verification of every installed package. While it shares many features with npm, Yarn's emphasis on speed, reliability, and security has made it a popular choice among developers, especially for larger projects. Recent versions of Yarn (Berry) introduce new features like Plug'n'Play for even faster and more efficient package resolution.
+Yarn is Facebook's JavaScript package manager offering fast, reliable, secure alternative to npm. Features lockfile consistency, parallel installations, offline mode, and checksum verification. Yarn Berry with Plug'n'Play improves performance for large projects.
 
 Visit the following resources to learn more:
 

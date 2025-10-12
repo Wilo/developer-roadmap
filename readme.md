@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="public/images/brand.png" height="128">
+  <a href="https://roadmap.sh/"><img src="public/img/brand.png" height="128"></a>
   <h2 align="center"><a href="https://roadmap.sh">roadmap.sh</a></h2>
   <p align="center">Community driven roadmaps, articles and resources for developers<p>
   <p align="center">
@@ -36,31 +36,40 @@ Here is the list of available roadmaps with more being actively worked upon.
 - [Backend Roadmap](https://roadmap.sh/backend) / [Backend Beginner Roadmap](https://roadmap.sh/backend?r=backend-beginner)
 - [DevOps Roadmap](https://roadmap.sh/devops) / [DevOps Beginner Roadmap](https://roadmap.sh/devops?r=devops-beginner)
 - [Full Stack Roadmap](https://roadmap.sh/full-stack)
-- [Git and GitHub](https://roadmap.sh/git-github)
+- [HTML Roadmap](https://roadmap.sh/html)
+- [CSS Roadmap](https://roadmap.sh/css)
+- [JavaScript Roadmap](https://roadmap.sh/javascript)
+- [TypeScript Roadmap](https://roadmap.sh/typescript)
+- [Git and GitHub](https://roadmap.sh/git-github) / [Git and GitHub Beginner](https://roadmap.sh/git-github?r=git-github-beginner)
 - [API Design Roadmap](https://roadmap.sh/api-design)
 - [Computer Science Roadmap](https://roadmap.sh/computer-science)
 - [Data Structures and Algorithms Roadmap](https://roadmap.sh/datastructures-and-algorithms)
 - [AI and Data Scientist Roadmap](https://roadmap.sh/ai-data-scientist)
 - [AI Engineer Roadmap](https://roadmap.sh/ai-engineer)
 - [AWS Roadmap](https://roadmap.sh/aws)
+- [Cloudflare Roadmap](https://roadmap.sh/cloudflare)
 - [Linux Roadmap](https://roadmap.sh/linux)
 - [Terraform Roadmap](https://roadmap.sh/terraform)
 - [Data Analyst Roadmap](https://roadmap.sh/data-analyst)
+- [BI Analyst Roadmap](https://roadmap.sh/bi-analyst)
+- [Data Engineer Roadmap](https://roadmap.sh/data-engineer)
+- [Machine Learning Roadmap](https://roadmap.sh/machine-learning)
 - [MLOps Roadmap](https://roadmap.sh/mlops)
 - [Product Manager Roadmap](https://roadmap.sh/product-manager)
+- [Engineering Manager Roadmap](https://roadmap.sh/engineering-manager)
 - [QA Roadmap](https://roadmap.sh/qa)
 - [Python Roadmap](https://roadmap.sh/python)
 - [Software Architect Roadmap](https://roadmap.sh/software-architect)
 - [Game Developer Roadmap](https://roadmap.sh/game-developer) / [Server Side Game Developer](https://roadmap.sh/server-side-game-developer)
 - [Software Design and Architecture Roadmap](https://roadmap.sh/software-design-architecture)
-- [JavaScript Roadmap](https://roadmap.sh/javascript)
-- [TypeScript Roadmap](https://roadmap.sh/typescript)
 - [C++ Roadmap](https://roadmap.sh/cpp)
 - [React Roadmap](https://roadmap.sh/react)
+- [Next.js Roadmap](https://roadmap.sh/nextjs)
 - [React Native Roadmap](https://roadmap.sh/react-native)
 - [Vue Roadmap](https://roadmap.sh/vue)
 - [Angular Roadmap](https://roadmap.sh/angular)
 - [Node.js Roadmap](https://roadmap.sh/nodejs)
+- [PHP Roadmap](https://roadmap.sh/php)
 - [GraphQL Roadmap](https://roadmap.sh/graphql)
 - [Android Roadmap](https://roadmap.sh/android)
 - [iOS Roadmap](https://roadmap.sh/ios)
@@ -68,6 +77,7 @@ Here is the list of available roadmaps with more being actively worked upon.
 - [Go Roadmap](https://roadmap.sh/golang)
 - [Rust Roadmap](https://roadmap.sh/rust)
 - [Java Roadmap](https://roadmap.sh/java)
+- [Kotlin Roadmap](https://roadmap.sh/kotlin)
 - [Spring Boot Roadmap](https://roadmap.sh/spring-boot)
 - [Design System Roadmap](https://roadmap.sh/design-system)
 - [PostgreSQL Roadmap](https://roadmap.sh/postgresql-dba)
@@ -84,6 +94,8 @@ Here is the list of available roadmaps with more being actively worked upon.
 - [Prompt Engineering Roadmap](https://roadmap.sh/prompt-engineering)
 - [Technical Writer Roadmap](https://roadmap.sh/technical-writer)
 - [DevRel Engineer Roadmap](https://roadmap.sh/devrel)
+- [AI Red Teaming Roadmap](https://roadmap.sh/ai-red-teaming)
+- [AI Agents Roadmap](https://roadmap.sh/ai-agents)
 
 There are also interactive best practices:
 

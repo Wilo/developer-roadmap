@@ -1,6 +1,6 @@
 # What is HTTP?
 
-HTTP (Hypertext Transfer Protocol) is the foundation of data communication on the World Wide Web. It's an application-layer protocol that defines how messages are formatted and transmitted between web browsers and servers. HTTP operates on a request-response model: clients (usually web browsers) send requests to servers, which then respond with the requested data. The protocol is stateless, meaning each request is independent of any previous requests. HTTP supports various methods (GET, POST, PUT, DELETE, etc.) for different types of interactions with resources. HTTPS is the secure version of HTTP, using encryption to protect data in transit. HTTP/2 and HTTP/3 are more recent versions, offering improved performance through features like multiplexing and header compression. Understanding HTTP is crucial for web development, as it underpins how web applications communicate and function.
+HTTP (Hypertext Transfer Protocol) enables browser-server communication through requests and responses. Stateless protocol using methods like GET and POST. HTTPS provides encrypted security. Newer versions (HTTP/2, HTTP/3) offer improved performance. Fundamental for web development understanding.
 
 Visit the following resources to learn more:
 

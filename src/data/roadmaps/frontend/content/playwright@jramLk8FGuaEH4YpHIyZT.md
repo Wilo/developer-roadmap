@@ -1,6 +1,6 @@
 # Playwright
 
-Playwright is an open-source automation framework developed by Microsoft for end-to-end testing of web applications. It provides a single API to automate Chromium, Firefox, and WebKit browsers across Windows, macOS, and Linux. Playwright supports multiple programming languages including JavaScript, TypeScript, Python, and .NET. It offers features like auto-waiting, network interception, and mobile emulation. The framework excels in handling modern web apps with dynamic content, providing reliable automation through its ability to wait for elements to be ready before acting on them. Playwright's cross-browser and cross-platform capabilities, combined with its powerful tooling for debugging and test generation, make it a robust choice for automated testing of web applications.
+Playwright is Microsoft's cross-browser automation testing framework supporting Chromium, Firefox, WebKit across platforms. Works with JavaScript, TypeScript, Python, .NET. Features auto-waiting, network control, mobile simulation. Excellent for modern web app testing with debugging tools.
 
 Visit the following resources to learn more:
 

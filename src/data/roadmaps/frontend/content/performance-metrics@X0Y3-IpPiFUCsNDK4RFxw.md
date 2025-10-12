@@ -1,12 +1,6 @@
 # Performance Metrics
 
-Web performance metrics are quantitative measures of the performance of a web page or application. They are used to assess the speed and efficiency of a web page, and they can help identify areas for improvement. Some common web performance metrics include:
-
-- Load time: The time it takes for a web page to fully load and become interactive.
-- First contentful paint (FCP): The time it takes for the first content to appear on the page.
-- Time to interactive (TTI): The time it takes for the page to become fully interactive.
-- First input delay (FID): The time it takes for the page to respond to the first user input.
-- Total blocking time (TBT): The time it takes for the page to become fully interactive, taking into account the time spent blocking the main thread.
+Web performance metrics measure webpage speed and efficiency. Key metrics: Load time, First Contentful Paint (FCP), Time to Interactive (TTI), First Input Delay (FID), and Total Blocking Time (TBT). Help identify optimization opportunities and user experience improvements.
 
 Visit the following resources to learn more:
 

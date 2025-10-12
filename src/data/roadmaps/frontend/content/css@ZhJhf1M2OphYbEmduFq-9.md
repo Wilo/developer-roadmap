@@ -1,6 +1,6 @@
 # CSS
 
-CSS (Cascading Style Sheets) is a styling language used to describe the presentation of a document written in HTML or XML. It defines how elements should be displayed on screen, on paper, or in other media. CSS separates the design from the content, allowing for greater flexibility and control over the layout, colors, and fonts of web pages. It uses a system of selectors to target HTML elements and apply styles to them. CSS supports responsive design through media queries, enabling the creation of layouts that adapt to different screen sizes and devices. The cascade, inheritance, and specificity are key concepts in CSS that determine how styles are applied when multiple rules target the same element. Modern CSS includes features like Flexbox and Grid for advanced layout control, animations, and transitions for creating dynamic user interfaces.
+CSS (Cascading Style Sheets) styles HTML documents, controlling layout, colors, and fonts. Separates design from content using selectors to target elements. Features responsive design with media queries, cascade rules, inheritance, and specificity. Modern CSS includes Flexbox, Grid, animations, and transitions.
 
 Visit the following resources to learn more:
 
@@ -8,3 +8,4 @@ Visit the following resources to learn more:
 - [@course@HTML & CSS Full Course - Beginner to Pro](https://www.youtube.com/watch?v=G3e-cpL7ofc)
 - [@article@Web.dev by Google — Learn CSS](https://web.dev/learn/css/)
 - [@feed@Explore top posts about CSS](https://app.daily.dev/tags/css?ref=roadmapsh)
+- [@course@Responsive Web Design Certification - Co-Learn HTML & CSS with guided projects](https://www.freecodecamp.org/learn/2022/responsive-web-design/)

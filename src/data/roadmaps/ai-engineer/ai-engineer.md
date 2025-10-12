@@ -4,11 +4,11 @@ pdfUrl: '/pdfs/roadmaps/ai-engineer.pdf'
 order: 4
 renderer: 'editor'
 briefTitle: 'AI Engineer'
-briefDescription: 'Step by step guide to becoming an AI Engineer in 2024'
-title: 'AI Engineer Roadmap'
-description: 'Step by step guide to becoming an AI Engineer in 2024'
+briefDescription: 'Step by step guide to becoming an AI Engineer in 2025'
+title: 'AI Engineer'
+description: 'Step by step guide to becoming an AI Engineer in 2025'
 hasTopics: true
-isNew: true
+isNew: false
 dimensions:
   width: 968
   height: 3200
@@ -24,9 +24,10 @@ schema:
   dateModified: '2024-10-03'
 seo:
   title: 'AI Engineer Roadmap'
-  description: 'Learn to become an AI Engineer using this roadmap. Community driven, articles, resources, guides, interview questions, quizzes for modern backend development.'
+  description: 'Learn to become an AI Engineer using this roadmap. Community driven, articles, resources, guides, interview questions, quizzes for modern AI development.'
   keywords:
     - 'ai engineer roadmap 2024'
+    - 'ai engineer roadmap 2025'
     - 'guide to becoming an ai engineer'
     - 'ai engineer roadmap'
     - 'ai engineer skills'
@@ -35,6 +36,17 @@ seo:
     - 'skills for ai engineer'
     - 'ai engineer quiz'
     - 'ai engineer interview questions'
+    - 'ai engineer learning path'
+    - 'how to become ai engineer 2025'
+    - 'ai engineering concepts'
+    - 'ai engineering curriculum'
+    - 'ai engineer future'
+    - 'ai engineer requirements'
+    - 'machine learning engineer roadmap'
+    - 'generative ai engineer'
+    - 'python for ai engineer'
+    - 'cloud ai services 2025'
+    - 'data engineering for ai'
 relatedRoadmaps:
   - 'ai-data-scientist'
   - 'prompt-engineering'

@@ -1,6 +1,6 @@
 # Custom Elements
 
-One of the key features of the Web Components standard is the ability to create custom elements that encapsulate your functionality on an HTML page, rather than having to make do with a long, nested batch of elements that together provide a custom page feature.
+Custom Elements enable creating your own HTML tags as part of Web Components. Build reusable webpage components with custom behavior instead of nested standard HTML. Keeps HTML cleaner and components more manageable with encapsulated functionality.
 
 Visit the following resources to learn more:
 

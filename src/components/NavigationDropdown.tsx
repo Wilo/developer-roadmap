@@ -1,14 +1,10 @@
 import {
-  BookOpenText,
-  CheckSquare,
-  FileQuestion,
-  FolderKanban,
-  Menu,
-  Shirt,
-  Video,
-  Map,
+  BookOpenText, FolderKanban,
+  Menu, Database,
+  ArrowRight,
+  Users
 } from 'lucide-react';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import { cn } from '../lib/classname.ts';
 import { useOutsideClick } from '../hooks/use-outside-click.ts';
 import {
@@ -19,31 +15,25 @@ import { useStore } from '@nanostores/react';
 
 const links = [
   {
-    link: '/roadmaps',
-    label: 'Official Roadmaps',
-    description: 'Made by subject matter experts',
-    Icon: Map,
-    isHighlighted: true,
+    link: '/courses/sql',
+    label: 'SQL Course',
+    description: 'Our premium SQL course',
+    Icon: Database,
+    isHighlighted: false,
+    isNew: true,
+  },
+  {
+    link: '/get-started',
+    label: 'Get Started',
+    description: 'Pick a path and get started',
+    Icon: ArrowRight,
+    isHighlighted: false,
   },
   {
     link: '/projects',
     label: 'Projects',
     description: 'Skill-up with real-world projects',
     Icon: FolderKanban,
-    isHighlighted: false,
-  },
-  {
-    link: '/best-practices',
-    label: 'Best Practices',
-    description: "Do's and don'ts",
-    Icon: CheckSquare,
-    isHighlighted: false,
-  },
-  {
-    link: '/questions',
-    label: 'Questions',
-    description: 'Test and Practice your knowledge',
-    Icon: FileQuestion,
     isHighlighted: false,
   },
   {
@@ -54,19 +44,11 @@ const links = [
     isHighlighted: false,
   },
   {
-    link: 'https://youtube.com/@roadmapsh',
-    label: 'Videos',
-    description: 'Animated and interactive content',
-    Icon: Video,
-    isExternal: true,
-    isHighlighted: false,
-  },
-  {
-    link: 'https://cottonbureau.com/people/roadmapsh',
-    label: 'Shop',
-    description: 'Get some cool swag',
-    Icon: Shirt,
-    isExternal: true,
+    link: '/teams',
+    label: 'Teams',
+    description: 'Collaborate with your team',
+    Icon: Users,
+    isExternal: false,
     isHighlighted: false,
   },
   {
@@ -109,7 +91,7 @@ export function NavigationDropdown() {
       </button>
       <div
         className={cn(
-          'pointer-events-none invisible absolute left-0 top-full z-[999] mt-2 w-48 min-w-[320px] -translate-y-1 rounded-lg bg-slate-800 py-2 opacity-0 shadow-xl transition-all duration-100',
+          'pointer-events-none invisible absolute left-0 top-full z-90 mt-2 w-48 min-w-[320px] -translate-y-1 rounded-lg bg-slate-800 py-2 opacity-0 shadow-xl transition-all duration-100',
           {
             'pointer-events-auto visible translate-y-2.5 opacity-100':
               $navigationDropdownOpen,
@@ -137,7 +119,7 @@ export function NavigationDropdown() {
             </span>
             <span className="flex flex-col">
               <span className="font-medium text-slate-300 transition-colors group-hover:text-slate-100">
-                {link.label}
+                {link.label} {link.isNew && <span className="text-[10px] font-bold text-black py-0.5 uppercase tracking-wider bg-yellow-400 rounded-full px-1.5 relative -top-0.5">New</span>}
               </span>
               <span className="text-sm">{link.description}</span>
             </span>

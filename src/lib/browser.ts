@@ -1,3 +1,54 @@
+export function urlToId(url: string) {
+  return url
+    .replace(/^https?:\/\//, '')
+    .replace('roadmap.sh', '')
+    .replace(/localhost:[\d]*?/, '')
+    .replace(/\?.*$/, '')
+    .replace(/\/$/, '')
+    .replace(/^\//, '')
+    .replace(/[^a-zA-Z0-9]/g, '-')
+    .toLowerCase() || 'home';
+}
+
+const LAST_PATH_KEY = 'lastPage';
+
+export function storePathAsLastPath() {
+  if (typeof window === 'undefined') {
+    return;
+  }
+
+  const ignoredPaths = [
+    '/login',
+    '/signup',
+    '/verfication-pending',
+    '/verify-email',
+    '/forgot-password',
+  ];
+
+  if (ignoredPaths.includes(window.location.pathname)) {
+    return;
+  }
+
+  const pagePath = [
+    '/respond-invite',
+    '/befriend',
+    '/r',
+    '/ai-roadmaps',
+  ].includes(window.location.pathname)
+    ? window.location.pathname + window.location.search
+    : window.location.pathname;
+
+  localStorage.setItem(LAST_PATH_KEY, pagePath);
+}
+
+export function getLastPath() {
+  if (typeof window === 'undefined') {
+    return;
+  }
+
+  return localStorage.getItem(LAST_PATH_KEY) || 'home';
+}
+
 type UtmParams = Partial<{
   utmSource: string;
   utmMedium: string;
@@ -33,7 +84,6 @@ export function getUrlUtmParams(): UtmParams {
 
 export function triggerUtmRegistration() {
   const utmParams = getStoredUtmParams();
-  console.log(utmParams);
   if (!utmParams.utmSource) {
     return;
   }
@@ -125,4 +175,61 @@ export function setUrlParams(params: Record<string, string>) {
   if (hasUpdatedUrl) {
     window.history.pushState(null, '', url.toString());
   }
+}
+
+export function getGclid(): string | undefined {
+  if (typeof window === 'undefined') {
+    return undefined;
+  }
+
+  const params = new URLSearchParams(window.location.search);
+  const gclid = params.get('gclid');
+  
+  if (gclid) {
+    localStorage.setItem('gclid', gclid);
+    return gclid;
+  }
+  
+  return localStorage.getItem('gclid') || undefined;
+}
+
+export function generateSessionId(): string {
+  if (typeof window === 'undefined') {
+    return '';
+  }
+
+  const existingSessionId = sessionStorage.getItem('session_id');
+  if (existingSessionId) {
+    return existingSessionId;
+  }
+
+  const sessionId = `${Date.now()}-${Math.random().toString(36).slice(2, 11)}`;
+  sessionStorage.setItem('session_id', sessionId);
+  return sessionId;
+}
+
+export function getPageTrackingData() {
+  if (typeof window === 'undefined') {
+    return {};
+  }
+
+  const utmParams = getUrlUtmParams();
+  const storedUtmParams = getStoredUtmParams();
+  
+  return {
+    page_location: window.location.href,
+    page_path: window.location.pathname,
+    page_referrer: document.referrer || undefined,
+    page_title: document.title,
+    user_agent: navigator?.userAgent || '',
+    screen_resolution: `${screen.width}x${screen.height}`,
+    viewport_size: `${window.innerWidth}x${window.innerHeight}`,
+    session_id: generateSessionId(),
+    gclid: getGclid(),
+    utm_source: utmParams.utmSource || storedUtmParams.utmSource,
+    utm_medium: utmParams.utmMedium || storedUtmParams.utmMedium,
+    utm_campaign: utmParams.utmCampaign || storedUtmParams.utmCampaign,
+    utm_content: utmParams.utmContent || storedUtmParams.utmContent,
+    utm_term: utmParams.utmTerm || storedUtmParams.utmTerm,
+  };
 }

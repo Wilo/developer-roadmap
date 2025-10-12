@@ -1,6 +1,6 @@
 # DOM Manipulation
 
-The Document Object Model (DOM) is a programming interface built for HTML and XML documents. It represents the page that allows programs and scripts to dynamically update the document structure, content, and style. With DOM, we can easily access and manipulate tags, IDs, classes, attributes, etc.
+DOM (Document Object Model) represents HTML/XML documents as programmable objects. Enables dynamic manipulation of page structure, content, and styles through JavaScript. Allows interaction with elements, attributes, and events for interactive webpages.
 
 Visit the following resources to learn more:
 

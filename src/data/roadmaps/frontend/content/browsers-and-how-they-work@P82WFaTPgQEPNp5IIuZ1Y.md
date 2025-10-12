@@ -1,6 +1,6 @@
 # Browsers
 
-A web browser is a software application that enables a user to access and display web pages or other online content through its graphical user interface.
+Web browsers request and display websites by interpreting HTML, CSS, and JavaScript. Use rendering engines (Blink, Gecko) for display and JavaScript engines (V8) for code execution. Handle security, bookmarks, history, and user interactions for web navigation.
 
 Visit the following resources to learn more:
 

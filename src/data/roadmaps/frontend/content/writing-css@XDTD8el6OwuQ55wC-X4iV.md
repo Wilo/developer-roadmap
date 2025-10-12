@@ -1,6 +1,6 @@
 # Modern CSS
 
-Modern CSS emphasizes responsive design with techniques like media queries and fluid typography. It also includes methodologies like CSS-in-JS and utility-first frameworks (e.g., Tailwind CSS). Features such as CSS Logical Properties improve internationalization, while CSS Houdini allows for more powerful custom styling. Modern CSS focuses on performance optimization, maintainability, and creating adaptive, accessible designs across various devices and screen sizes, significantly improving the capabilities and efficiency of web styling.
+Modern CSS creates responsive designs using media queries, flexible typography, CSS-in-JS, and frameworks like Tailwind. Features CSS Logical Properties for internationalization and CSS Houdini for custom styling. Goals: performance, maintainability, and accessible designs across all devices.
 
 Visit the following resources to learn more:
 
